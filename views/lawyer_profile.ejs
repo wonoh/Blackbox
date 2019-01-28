@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>BLACKBOX</title>
+        <link href="../stylesheets/bootstrap.min.css" rel="stylesheet">
+        <link href="../stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+        <link href="../stylesheets/magnific-popup.css" rel="stylesheet">
+        <link href="../stylesheets/creative.min.css" rel="stylesheet">
+    </head>
+
+    <body id="page-top">
+        <nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container">
+              <a class="carousel-control-prev" href="#" onClick="history.back()" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+
+                <a href="/" class="navbar-brand js-scroll-trigger">BLACKBOX</a>
+                <button type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarResponsive" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                       <% if(id) { %>
+                        <li class="nav-item">
+                          <a href="/logout" class="nav-link js-scroll-trigger">logout</a>
+                        </li>
+                        <% }else{ %>
+                        <li class="nav-item">
+                          <a href="/login" class="nav-link js-scroll-trigger">login</a>
+                        </li>
+                        <% } %>
+                        <li class="nav-item">
+                            <a href="/consult" class="nav-link js-scroll-trigger">Consult</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/eyewitness" class="nav-link js-scroll-trigger">Eyewitness</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/setting" class="nav-link js-scroll-trigger">Setting</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section id="client" style="width:100%;" class="bg-dark text-white">
+            <div class="container">
+              <div class="col-lg-12 text-center">
+            	<br>
+                      <h2 class="section-heading text-white" style="font-family:Nanum Gothic;"><storng>CHANGE INFORMATION</strong></h2>
+                      <hr class="my-4">
+                    	<p class="text-faded mb-4" style="font-size:12pt;color:#ffffff;">변호사 개인프로필</p>
+            	<br>
+            	</div>
+                <form action="/setting/lawyer_profile" method="POST">
+                  <%data.forEach(function(item,index) { %>
+                    <table summary="" align="center">
+                	  <caption></caption>
+                	  <colgroup>
+                		<colwidth="" />
+                		<colwidth="" />
+                	  </colgroup>
+                	  <tbody>
+                		<tr style="text-align:right;">
+                      <th><label style="list-style-type:none;font-family:Nanum Gothic">학력</label></th>
+                      <td><input name ="background" type="text" class="form-control" style="margin-top:5px;margin-bottom:5px;margin-left:40px;" value="<%=item.background%>"></td>
+                		</tr>
+
+                		<tr style="text-align:right;">
+                      <th><label style="list-style-type:none;font-family:Nanum Gothic">연혁</label></th>
+                      <td><textarea rows="9" name ="history" cols="50" style="margin-top:5px;margin-bottom:5px;margin-left:40px;"><%=item.history%></textarea></td>
+                    </tr>
+
+                    <tr style="text-align:right;">
+                      <th><label style="list-style-type:none;font-family:Nanum Gothic">주요 사건</label></th>
+                      <td><input name ="event" type="text" class="form-control" style="margin-bottom:15px;margin-left:40px;" value="<%=item.event%>"></td>
+                    </tr>
+
+                    <tr style="text-align:right;">
+                        <th><label style="list-style-type:none;font-family:Nanum Gothic">자기 소개</label></th>
+                        <td><textarea rows="9" name="cover" cols="50" style="margin-top:5px;margin-bottom:5px;margin-left:40px;"><%=item.cover%></textarea></td>
+                      </tbody>
+                    </table>
+                    <%});%>
+                    <button type="submit"class="btn btn-light btn-xl sr-button" style="margin-left:495px;background-color:#f05f40;border-radius:4px;color:#ffffff;font-family:Nanum Gothic;">완료</button>
+            </form>
+          </div>
+        </section>
+        <script src="../javascripts/jquery.min.js"></script>
+        <script src="../javascripts/bootstrap.bundle.min.js"></script>
+        <script src="../javascripts/jquery.easing.min.js"></script>
+        <script src="../javascripts/scrollreveal.min.js"></script>
+        <script src="../javascripts/jquery.magnific-popup.min.js"></script>
+        <script src="../javascripts/creative.min.js"></script>
+    </body>
+
+</html>

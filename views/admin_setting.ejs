@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Creative - Start Bootstrap Theme</title>
+    <link href="../stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="../stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+    <link href="../stylesheets/magnific-popup.css" rel="stylesheet">
+    <link href="../stylesheets/creative.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+       <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="/">BLACKBOX</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <% if(id) { %>
+             <li class="nav-item">
+               <a href="/logout" class="nav-link js-scroll-trigger">logout</a>
+             </li>
+             <% }else{ %>
+             <li class="nav-item">
+               <a href="/login" class="nav-link js-scroll-trigger">login</a>
+             </li>
+             <% } %>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/admin/admin_setting">Setting</a>
+            </li>
+	<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="../"><i class="fa fa-1g fa-window-maximize text-primary mb-3 sr-icons"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+<section id="setting"  class="bg-dark text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+        <br>
+	<br>
+	<h2 class="section-heading" style="font-family:Nanum Gothic;"><strong>블랙박스를 이용한 법적 자문 서비스 관리</strong></h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-user text-primary mb-3 sr-icons"></i><br>
+              <h3 class="mb-3">회원관리</h3>
+              <a class="btn btn-primary btn-xl js-scroll-trigger" style="margin:15px; background-color:#f05f40; color:#ffffff;" href="/admin/c_user_info">USER MANAGE</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-key text-primary mb-3 sr-icons"></i><br>
+              <h3 class="mb-3">비밀번호 변경</h3>
+              <a class="btn btn-primary btn-xl js-scroll-trigger" style="margin:15px; background-color:#f05f40; color:#ffffff;" href="/pwupdate"> ADMIN SETTING </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-balance-scale text-primary mb-3 sr-icons"></i><br>
+              <h3 class="mb-3">사건의뢰/수임 관리</h3>
+              <a class="btn btn-primary btn-xl js-scroll-trigger" style="margin:15px; background-color:#f05f40; color:#ffffff;" href="/admin/admin_consult"> CONSULT MANAGE </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-binoculars text-primary mb-3 sr-icons"></i><br>
+              <h3 class="mb-3">목격제보 관리</h3>
+              <a class="btn btn-primary btn-xl js-scroll-trigger" style="margin:15px; background-color:#f05f40; color:#ffffff;" href="/admin/admin_eyewitness"> EYEWITNESS MANAGE </a>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+	<section id="setting"  class="bg-dark text-white">
+	</section>
+
+  <section id="setting" class="bg-dark text-white"></section>
+  <script src="../javascripts/jquery.min.js"></script>
+  <script src="../javascripts/bootstrap.bundle.min.js"></script>
+  <script src="../javascripts/jquery.easing.min.js"></script>
+  <script src="../javascripts/scrollreveal.min.js"></script>
+  <script src="../javascripts/jquery.magnific-popup.min.js"></script>
+  <script src="../javascripts/creative.min.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BlACKBOX</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="../stylesheets/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../stylesheets/creative.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id='page-top'>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+              <a class="carousel-control-prev" href="#" onClick="history.back()" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+
+        <a class="navbar-brand js-scroll-trigger" href="/">BLACKBOX</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <% if(id) { %>
+                        <li class="nav-item">
+                          <a href="/logout" class="nav-link js-scroll-trigger">logout</a>
+                        </li>
+                        <% }else{ %>
+                        <li class="nav-item">
+                          <a href="/login" class="nav-link js-scroll-trigger">login</a>
+                        </li>
+                        <% } %>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/consult">Consult</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/eyewitness">Eyewitness</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/setting">Setting</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <section id="client" class="bg-dark text-white" style="width:100%;">
+    <div class="container">
+	<div class="col-lg-12 text-center">
+	<br>
+          <h2 class="section-heading text-white" style="font-family:Nanum Gothic;"><storng>CHANGE INFORMATION</strong></h2>
+          <hr class="my-4">
+        	<p class="text-faded mb-4" style="font-size:12pt;color:#ffffff;">의뢰인 개인정보 수정</p>
+	<br>
+	</div>  
+	<form action="/setting/user_info" method="POST">
+            <%data.forEach(function(item,index){%>
+		<table summary="" align="center">
+	<caption></caption>
+	<colgroup>
+		<colwidth="" />
+		<colwidth="" />
+	</colgroup>
+	<tbody>
+		<tr style="text-align:right;">
+              		<th><label style="list-style-type:none;font-family:Nanum Gothic">이름</label></th>
+                        <td><input name ="name" type="text" class="form-control" style="margin-top:5px;margin-bottom:5px;margin-left:40px;" value="<%=item.name%>"></td>
+		</tr>
+		
+		<tr style="text-align:center;">
+		<th>&nbsp</th>
+		<td><p class="text-faded mb-4" style="font-size:12pt;color:#ffffff;">공백없이 한글만 입력 가능</p><td>
+              	</tr>
+              
+		<tr style="text-align:right;">
+              		<th><label style="list-style-type:none;font-family:Nanum Gothic">이메일</label></th>
+                       <td><input name ="email" type="email" class="form-control" style="margin-bottom:15px;margin-left:40px;" value="<%=item.email%>"></td>
+              	</tr>
+            
+              	<tr style="text-align:right;">
+	             	<th><label style="list-style-type:none;font-family:Nanum Gothic">전화번호</label></th>
+              		<td><input name ="tele" type="text" class="form-control" style="margin-top:15px;margin-bottom:15px;margin-left:40px;" value="<%=item.tele%>"></td>
+              	</tr>
+            
+        	<tr style="text-align:right;">
+              		<th><label style="list-style-type:none;font-family:Nanum Gothic">휴대폰번호</label></th>
+                        <td><input name ="phone" type="text" class="form-control" style="margin-top:15px;margin-bottom:15px;margin-left:40px;" value="<%=item.phone%>"></td>
+              	</tr>
+	</tbody>
+	</table>
+            <%});%>
+		<br>
+              <button type="submit" class="btn btn-light btn-xl sr-button" style="margin-left:495px;background-color:#f05f40;border-radius:4px;color:#ffffff;font-family:Nanum Gothic;">수정완료</button>
+          </form>
+    </div>
+  </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../javascripts/jquery.min.js"></script>
+    <script src="../javascripts/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../javascripts/jquery.easing.min.js"></script>
+    <script src="../javascripts/scrollreveal.min.js"></script>
+    <script src="../javascripts/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../javascripts/creative.min.js"></script>
+
+  </body>
+
+</html>

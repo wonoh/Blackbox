@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>BLACKBOX</title>
+        <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+        <link href="stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+        <link href="stylesheets/magnific-popup.css" rel="stylesheet">
+        <link href="stylesheets/creative.min.css" rel="stylesheet">
+    </head>
+
+    <body id="page-top">
+        <nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container">
+              <a class="carousel-control-prev" href="#" onClick="history.back()" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+
+                <a href="/" class="navbar-brand js-scroll-trigger">BLACKBOX</a>
+                <button type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarResponsive" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="/login" class="nav-link js-scroll-trigger">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/consult" class="nav-link js-scroll-trigger">Consult</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/eyewitness" class="nav-link js-scroll-trigger">Eyewitness</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/setting" class="nav-link js-scroll-trigger">Setting</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section id="login" class="bg-dark text-white">
+            <div class="container">
+                <div class="col-lg-12 text-center">
+                    <br>
+                    <br>
+                    <form action="/login" name="login" method="POST">
+                        <div id="login_box" style="background-color:#ffffff; position:relative; display:inline-block; width:50%; height:40%;color:#212529; ">
+                            <br>
+                            <h2 font-family:nanum="" gothic;="" class="section-heading style=">
+                                <strong>로그인</strong>
+                            </h2>
+                            <hr class="my-4">
+                            <ul id="input_button">
+                                <li id="id_pass">
+                                    <ul>
+                                        <li id="idd">
+                                            <span style="font-family:Nanum Gothic; color:#212529;">아이디</span>&nbsp &nbsp &nbsp
+                                            <input type="text" name="userid">&nbsp</li>
+                                        <li id="pass">
+                                            <span style="font-family:Nanum Gothic; color:#212529;">패스워드</span>&nbsp &nbsp &nbsp
+                                            <input type="password" name="password">&nbsp</li>
+                                    </ul>
+                                </li>
+                                <li id="login_btn">
+                                    <button type="submit" style="background-color:#f05f40;font-family:Nanum Gothic;font-size:15px;color:#ffffff;">로그인</button>
+                                </li>
+                            </ul>
+                            <ul id="btns">
+                                <li style="margin-bottom:10px;font-family:Nanum Gothic;">
+                                    <a id="idf" href="/idFind">아이디 찾기</a>
+                                </li>
+                                <li style="margin-bottom:10px;font-family:Nanum Gothic;">
+                                    <a id="psf" href="/pwFind">패스워드 찾기</a>
+                                </li>
+                            </ul>
+                            <br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="setting" class="bg-dark text-white"></section>
+        <script src="javascripts/jquery.min.js"></script>
+        <script src="javascripts/bootstrap.bundle.min.js"></script>
+        <script src="javascripts/jquery.easing.min.js"></script>
+        <script src="javascripts/scrollreveal.min.js"></script>
+        <script src="javascripts/jquery.magnific-popup.min.js"></script>
+        <script src="javascripts/creative.min.js"></script>
+    </body>
+
+</html>
